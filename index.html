@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style_login.css">
+    <title>Login</title>
+</head>
+<body>
+    <section id="login" class="login">
+        <div class="tituloLogin">
+            <h1> LOGIN </h1>
+        </div>
+        <div class="containerFigure">
+            <form id="formlogin" action="" >    
+                    <div class="inputLogin">
+                        <label for="usuario">Usuário</label>
+                        <input id="usuario" type="text" name="usuario" required maxlenght="25"
+                        minlength="5">
+                    </div>
+                    <div class="inputLogin">
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" required maxlenght="25"> 
+                        <img id="imgpass" onclick="showPassword()" src="./images/olho_fechado.png" alt="olho indicando que a senha está oculta">
+                    </div>
+                        <label for="lembrar" class="checkboxLogin">
+                            <input id="lembrar"
+                            type="checkbox"name="lembrar" id="lembrar">
+                            Lembrar-me
+                        </label>
+                    <div>
+                        <button type="submit" class="btnEntrar">Entrar</button>
+                    </div>
+                </form>
+                <div class="imagemLogin">
+                    <figure>
+                        <img src="/images/login_img.png">
+                    </figure>
+                </div>
+        </div>
+    </section>
+    <script src="./js/goto.js"></script>
+<script>
+      const showPassword = () => {
+        const inputSenha = document.getElementById("senha");
+        const imgpass = document.getElementById("imgpass");
+        if (inputSenha.type === "password") {
+            inputSenha.type = "text";
+            imgpass.src = "./images/olho_aberto.png"
+        }else {
+            inputSenha.type = "password";
+            imgpass.src = "./images/olho_fechado.png"
+        }
+    }
+
+    const form = document.getElementById("formlogin");
+    const usuario = document.getElementById("usuario");
+    const senha = document.getElementById("senha");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if(usuario.value !== "aluno"){
+            alert("senha errada");
+        }
+        else if(senha.value !== "12345"){
+            alert("senha errada");
+        }
+        else{
+            localStorage.setItem( 'login' ,JSON.stringify({usuario: usuario.value, senha: senha.value}))
+            goTo('pages/cadastro');
+        }
+    })
+</script>
+</body>
+</html>

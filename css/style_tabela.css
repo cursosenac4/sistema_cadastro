@@ -1,0 +1,54 @@
+.containerUsuarios{
+
+}
+.boxUsuario{
+
+}
+
+.infoUsuario{
+
+}
+
+@media (min-width: 640px) {
+    .containerUsuarios{
+
+    }
+}
+
+
+.boxUsuario{
+    width: 10rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgb(228, 228, 228);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.infoUsuario{
+    width: 100%;
+    margin: 0;
+    word-break: break-all;
+}
+.containerInfoUsuario{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxUsuario > img{
+    border-radius: 9999rem;
+    height: 5rem;
+    
+}
+.btnExcluir{
+    margin-top: 1rem;
+    color: white;
+    padding:  .5rem 1rem;
+    border-radius: .5rem;
+    width: 100%;
+    border: none;
+    background: rgb(252, 83, 83);
+    &:hover{
+        cursor: pointer;
+        background: red;
+    }
+}

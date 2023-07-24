@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+body{
+  margin: 0;
+  font-family: Cairo;
+  display: flex;
+}
+.containerSite{
+  width: 100%;
+  & header{
+    height: 3rem;
+    width: 100%;
+    background: white;
+    animation: .3s ease-out;
+    border-bottom: .2rem solid orangered;
+    & figure{
+      margin: 0;
+      & .logo{
+          cursor: pointer;
+          height: 2rem;
+      }
+    
+    }
+  }
+  & > .conteudoSite{
+    background-color: white; 
+    width: 100%;
+    display: flex;
+    & > form{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem;
+      & > .containerInput{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        & > label{
+          font-weight: 700;
+          color: gray;
+          padding:  0 1rem;
+          margin-top: 1rem;
+        }
+        & > input{
+          padding-left: 1rem;
+          border-radius: 2rem;
+          border: 2px solid #bbbbbb;
+          height: 3rem;
+        }
+      }
+      & button{
+        background: #0c813f;
+        border: none;
+        border-radius: .5rem;
+        margin-top: 1rem;
+        height: 3rem;
+        width: 100%;
+        animation: all 1s ease-out;
+        font-weight: bold;
+        font-family: Cairo;
+        font-size: 1.5rem;
+        color: white;
+        &:hover{
+          cursor: pointer;
+          background: #18d168;
+        }
+      }
+    }
+  }
+}
+.menuClose{
+  width: 0rem !important;
+}
+
+.menu{
+  width: 20rem;
+  overflow: hidden;
+  height: 100vh;
+  background-color: rgb(255, 170, 139);
+  transition: all 0.5s ease-out;
+  & .closeIcon {
+    width: 95%;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: flex-end;
+   & img {
+      cursor: pointer;
+      height: 2rem;
+      transition: all 0.5s ease-out;
+   }
+   & img:hover{
+    opacity: .75;
+   }
+  }
+    
+  .containerItems{
+    & ul{ 
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      & li{
+        cursor: pointer;
+        margin: .5rem 0;
+        height: 3rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: rgb(252, 130, 86);
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        transition: all 0.5s ease-out;
+        &:hover{
+          padding-left: 5rem;
+          background-color: rgb(255, 113, 61);
+        }
+        & p{
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .containerSite{
+    & .conteudoSite{
+      width: 40%;
+      width: 100%;
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .menuClose{
+    width: 20rem !important;
+  }
+
+  .menu{
+    padding-top: 2.5rem;
+
+    & .closeIcon {
+      display: none; 
+    }
+  }
+  .containerSite{
+    width: 100%;
+    & header{
+      & figure{
+        & .logo{
+          cursor: default;
+        }
+      }
+    }
+    & > .conteudoSite{
+      & > form{
+        width: 40rem;
+      }
+    }
+  }
+}

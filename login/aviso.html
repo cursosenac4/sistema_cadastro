@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_aviso.css">
+    <title>Login</title>
+</head>
+<body>
+    <section id="aviso" class="aviso">
+        <div class="tituloAviso">
+            <h1> AVISO </h1>
+            <h2>Você não está logado</h2>
+            <form id="formAviso" action="" >    
+                        <button type="submit" class="btnAviso">Login</button>
+            </form>
+        </div>
+        <div class="imagemAviso">
+            <figure>
+                <img src="/images/login_aviso.png">
+            </figure>
+        </div>
+    </section>
+    <script src="../js/goto.js"></script>
+    <script>
+
+        const form = document.getElementById("formAviso");
+        
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            goTo('index');
+        })
+    </script>
+</body>
+</html>

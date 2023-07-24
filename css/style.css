@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    background: white;
+    justify-content: space-between;
+    animation: .3s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: .2rem solid orangered;
+    & a{
+        text-decoration: none;
+        color: orangered;
+    }
+}
+.container-navbar{
+    display: flex;
+    align-items: center;
+}
+figure{
+    margin: 0;
+}
+.logo{
+    height: 2rem;
+}
+
+.container-intro{
+    padding: 0 1rem;
+    padding: 5rem;
+}
+
+.card{
+    border-radius: 2rem;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-width: 250px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding-right: 1rem;
+}
+#sobre h1{
+    margin-left: 2rem;
+}
+
+@media (min-width: 640px) {
+    .card{
+        margin: 0 1rem;
+    }
+    .container-card{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > header{
+            & > nav{
+                margin-right: 10rem;
+            }
+        }
+
+    }
+    .container-navbar{
+        min-width: 1024px;
+        justify-content: space-between;
+    }
+    section{
+        max-width: 1024px;
+        width: 100%;
+    }
+    .card{
+        margin: 0 1rem;
+    }
+    .container-card{
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}

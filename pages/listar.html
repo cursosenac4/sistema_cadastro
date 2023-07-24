@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listar</title>
+    <link rel="stylesheet" href="../css/style_listar.css" />
+    <link rel="stylesheet" href="../css/style_tabela.css" />
+  </head>
+    <body>
+        <div id="menu" class="menu menuClose">
+            <div id="closeIcon" class="closeIcon">
+                <img src="/images/icon_close.png" alt="">
+            </div>
+            <div class="containerItems">
+                <ul>
+                    <li onclick="goTo('pages/cadastro')"> 
+                        <p>
+                            Cadastra
+                        </p>
+                    </li>
+                    <li style="padding-left: 5rem;
+                    background-color: rgb(255, 113, 61);">
+                        <p>
+                            Listar
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="containerSite">
+            <header>
+                <div class="container-navbar">
+                <figure id="logo" class="logo"> 
+                    <img class="logo" src="/images/icon.png" alt="">
+                </figure>
+                </div>
+            </header>
+            <div class="conteudoSite">
+                <div id="containerUsuarios" class="containerUsuarios">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/goto.js"></script>
+        <script src="../js/autenticacao.js"></script> 
+        <script src="../js/boxUsuario.js"></script>
+        
+        <script>
+            const logo = document.querySelector('#logo');
+            const menu = document.querySelector('#menu');
+            const closeIcon = document.querySelector('#closeIcon');
+
+            const toogleMenu = () => {
+                menu.classList.toggle('menuClose');
+            }
+            logo.addEventListener('click', toogleMenu);
+            closeIcon.addEventListener('click', toogleMenu);
+        </script>
+        
+        <script>
+            const containerUsuarios = document.getElementById('containerUsuarios');
+            const listaUsuarios = JSON.parse(localStorage.getItem('usuarios'))
+            
+            criarBoxUsuario(containerUsuarios, listaUsuarios)
+        </script>
+      </body>
+</html>

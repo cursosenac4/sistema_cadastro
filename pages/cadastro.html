@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/style_cadastro.css" />
+  </head>
+    <body>
+        <div id="menu" class="menu menuClose">
+            <div id="closeIcon" class="closeIcon">
+                <img src="/images/icon_close.png" alt="">
+            </div>
+            <div class="containerItems">
+                <ul>
+                    <li style="padding-left: 5rem;
+                    background-color: rgb(255, 113, 61);">
+                        <p>
+                            Cadastra
+                        </p>
+                    </li>
+                    <li onclick="goTo('pages/listar')">
+                        <p>
+                            Listar
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="containerSite">
+            <header>
+                <div class="container-navbar">
+                <figure id="logo" class="logo"> 
+                    <img class="logo" src="/images/icon.png" alt="">
+                </figure>
+                </div>
+            </header>
+            <div class="conteudoSite">
+                <form id="formCadastro" action="">
+                    <div class="containerInput">
+                        <label for="nome">Nome:</label>
+                        <input id="nome" type="text" name="nome" maxlenght="25"
+                        minlength="5">
+                    </div>
+                    <div class="containerInput">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" name="email"
+                        minlength="5">
+                    </div>
+                    <div class="containerInput">
+                        <label for="funcao">Função:</label>
+                        <input id="funcao" type="text" name="funcao"
+                        minlength="1">
+                    </div>
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </div>
+        <script src="../js/goto.js"></script>
+        <script src="../js/autenticacao.js"></script>
+        <script src="../js/cadastrarPessoa.js"></script>
+        <script>
+            // script para deixar o menu responsivo 
+            const logo = document.querySelector('#logo');
+            const menu = document.querySelector('#menu');
+            const closeIcon = document.querySelector('#closeIcon');
+
+            const toogleMenu = () => {
+                menu.classList.toggle('menuClose');
+            }
+            logo.addEventListener('click', toogleMenu);
+            closeIcon.addEventListener('click', toogleMenu);
+        </script>
+        <script>
+            //script para inserir usuário no localStorage
+        </script>
+      </body>
+</html>
