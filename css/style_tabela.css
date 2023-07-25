@@ -1,12 +1,17 @@
 .containerUsuarios{
-
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 .boxUsuario{
-
+    margin: 20px;
 }
 
 .infoUsuario{
-
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
 }
 
 @media (min-width: 640px) {
@@ -17,6 +22,9 @@
 
 
 .boxUsuario{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 10rem;
     border-radius: 1rem;
     padding: 1rem;
@@ -25,7 +33,7 @@
 }
 .infoUsuario{
     width: 100%;
-    margin: 0;
+    margin: 10px 0px 0px 0px;
     word-break: break-all;
 }
 .containerInfoUsuario{

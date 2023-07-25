@@ -39,6 +39,9 @@
                 </div>
         </div>
     </section>
+    <div>
+        <img id="imgpass" src="./images/olho_fechado.png" alt="Acesso negado!">
+    </div>
     <script src="./js/goto.js"></script>
 <script>
       const showPassword = () => {
@@ -56,11 +59,13 @@
     const form = document.getElementById("formlogin");
     const usuario = document.getElementById("usuario");
     const senha = document.getElementById("senha");
+    const img_alerta = document.getElementById("img_alerta")
 
     form.addEventListener("submit", (event) => {
         event.preventDefault();
         if(usuario.value !== "aluno"){
             alert("senha errada");
+            img_alerta.src = "./images/olho_fechado.png"
         }
         else if(senha.value !== "12345"){
             alert("senha errada");

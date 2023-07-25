@@ -9,7 +9,7 @@
     *O script de cadastro está no arquivo pages/cadastro.html na tag <script></script>
     
 * sistema não está exibindo os usuários cadastrados de maneira certa. falta responsividade no sistema de listar.
-    * O css responável pela responsividade está css/style_tabela.css
+    * O css responsável pela responsividade está css/style_tabela.css
 
 
 ## Resolva os problemas relatados pelo cliente e realize o commit do problema solucionado.

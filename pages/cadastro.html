@@ -73,6 +73,29 @@
         </script>
         <script>
             //script para inserir usuário no localStorage
+          
+    const formCadastro = document.getElementById("formCadastro");
+    const nome = document.getElementById("nome");
+    const email = document.getElementById("email");
+    const funcao = document.getElementById("funcao");
+
+    formCadastro.addEventListener("submit", (event) => {
+        event.preventDefault();
+            console.log(nome.value, email.value, funcao.value)
+            if(nome.value === ""){
+                alert("Nome invalido");
+            }
+            else if(email.value === ""){
+                alert("Email invalido");
+            }
+            else if(funcao.value === ""){
+                alert("Função invalida");
+            }
+            else {
+                cadastrar(nome.value, email.value,funcao.value);
+                alert("Cadastro realizado com sucesso!");
+            }
+    })
         </script>
       </body>
 </html>
