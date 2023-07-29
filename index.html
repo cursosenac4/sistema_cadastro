@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/style_login.css">
     <title>Login</title>
 </head>
-<body>
+<body id="body">
     <section id="login" class="login">
         <div class="tituloLogin">
             <h1> LOGIN </h1>
@@ -39,9 +39,9 @@
                 </div>
         </div>
     </section>
-    <div>
-        <img id="imgpass" src="./images/olho_fechado.png" alt="Acesso negado!">
-    </div>
+    
+        <img id="img_alerta" src="/images/login_img.png" style="display: none; position: absolute; top: 50%; left: 50%; height: 20rem; transform: translate(-50%,-50%); border-radius: 50px;">
+    
     <script src="./js/goto.js"></script>
 <script>
       const showPassword = () => {
@@ -59,15 +59,21 @@
     const form = document.getElementById("formlogin");
     const usuario = document.getElementById("usuario");
     const senha = document.getElementById("senha");
-    const img_alerta = document.getElementById("img_alerta")
+    const img_alerta = document.getElementById("img_alerta");
+    const body = document.getElementById("body");
 
     form.addEventListener("submit", (event) => {
         event.preventDefault();
         if(usuario.value !== "aluno"){
-            alert("senha errada");
-            img_alerta.src = "./images/olho_fechado.png"
+            img_alerta.src = "./images/Agente secreto1.webp";           
+            img_alerta.style = "display: auto; position: absolute; top: 50%; left: 82%; height: 20rem; transform: translate(-50%,-50%); border-radius: 200px;";
+            body.style = "background-color: #211D27";
+            alert("Usuário errado");    
         }
         else if(senha.value !== "12345"){
+            img_alerta.src = "./images/Agente secreto1.webp";           
+            img_alerta.style = "display: auto";
+            body.style = "background-color: #211D27";
             alert("senha errada");
         }
         else{
